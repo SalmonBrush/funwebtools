@@ -8,101 +8,99 @@
         /* Basic old internet style */
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            background-color: black; /* Black background */
             margin: 0;
             padding: 0;
-            color: #000000;
+            color: cyan; /* Cyan text color */
             display: flex;
             flex-direction: column;
-            height: 100vh; /* Make the body take up at least full height */
+            height: 100vh; /* Full height */
         }
 
         header {
-            background-color: #9c9c9d; /* Old-school blue */
-            color: #ffffff;
-            text-align: left;
-            padding: 15px 0;
+            padding: 0px 20px;
             font-size: 2.5rem;
             font-weight: bold;
-            border-bottom: 3px solid #0000ff;
+        }
+
+        .logo {
+            display: inline-block;
         }
 
         main {
-            flex: 1; /* Take up the remaining space */
+            display: flex;
             padding: 20px;
-            text-align: center;
+            padding-top: 0;
+            justify-content: space-between;
+            flex: 1;
         }
 
-        h2 {
-            font-size: 1.8rem;
-            margin-top: 20px;
-            color: #333333;
-        }
-
-        p {
+        /* Tools List */
+        .tools-list {
+            flex: 1;
             font-size: 1.2rem;
-            line-height: 1.6;
         }
 
-        /* Hyperlink style (classic) */
-        a {
-            color: #0000ee; /* Classic blue link */
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background-color: #000000;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 0.9rem;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .retro-box {
-            margin-top: 30px;
-            padding: 15px;
-            border: 2px solid #666666;
-            background-color: #f2f2f2;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            display: inline-block;
-            width: auto;
-        }
-
-        .retro-box h2 {
-            font-size: 1.6rem;
+        .tools-list h2 {
+            font-size: 1.8rem;
             margin-bottom: 10px;
         }
 
-        .retro-box p {
-            font-size: 1.1rem;
+        .tools-list ul {
+            list-style-type: none;
+            padding-left: 0;
         }
 
-        .retro-box a {
-            color: #cc0000; /* Red for contrast */
-            font-size: 1.3rem;
-            font-weight: bold;
+        .tools-list ul li {
+            margin: 5px 0;
+        }
+
+        /* Info Card */
+        .info-card {
+            width: 300px;
+            padding: 15px;
+            border: 2px solid cyan; /* Cyan border */
+            box-shadow: 2px 2px 4px rgba(0, 255, 255, 0.2); /* Subtle cyan shadow */
+            font-size: 1rem;
+        }
+
+        .info-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0px;
+        }
+
+        .info-card p {
+            margin-bottom: 0px;
+        }
+
+        footer {
+            background-color: black;
+            color: cyan;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
     <header>
-        SalmonBrush
+        <h1 class="logo">SalmonBrush</h1>
     </header>
 
     <main>
-        <div class="retro-box">
-            <h2>FunWebTools</h2>
-            <p>This is a simple homepage for my GitHub web-based scripts. Below is my first one:</p>
-            <p><a href="pages/index.html">Dither</a></p>
+        <!-- Tools List -->
+        <div class="tools-list">
+            <h2>Tools:</h2>
+            <ul>
+                <li><a href="pages/index.html">Dither</a></li>
+            </ul>
+        </div>
+
+        <!-- Info Card -->
+        <div class="info-card">
+            <h3>Info</h3>
+            <p>This page is a fun playground where i make JS tools. Currently there is only one, dither. The tool applies bayer dither to webcam footage or input images.</p>
         </div>
     </main>
 
