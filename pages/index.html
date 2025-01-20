@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordered Dithering (Sharp and Cross-Hatched)</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        /* Add some basic styling */
+        .slider-container {
+            margin: 10px 0;
+        }
+        .slider-label {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <label for="fileUpload">Upload File: </label>
+        <input type="file" id="fileUpload"><br>
+        <label for="sourceSwitch">Source: </label>
+        <select id="sourceSwitch" class="switch">
+            <option value="webcam">Webcam</option>
+            <option value="file">File</option>
+        </select><br>
+        <label for="resolution">Resolution: </label>
+        <input type="range" id="resolution" min="1" max="10" step="0.1" value="1" class="resolution">
+        <span id="resolutionValue">1</span><br>
+        <label for="saturation">Saturation: </label>
+        <input type="range" id="saturation" min="0" max="2" step="0.1" value="1" class="slider-container">
+        <span id="saturationValue">1</span><br>
+        <label for="contrast">Contrast: </label>
+        <input type="range" id="contrast" min="0" max="2" step="0.1" value="1" class="slider-container">
+        <span id="contrastValue">1</span><br>
+        <label for="brightness">Brightness: </label>
+        <input type="range" id="brightness" min="0" max="2" step="0.1" value="1" class="slider-container">
+        <span id="brightnessValue">1</span><br>
+        <label for="hue">Hue: </label>
+        <input type="range" id="hue" min="0" max="360" step="1" value="0" class="slider-container">
+        <span id="hueValue">0</span>
+    </div>
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <script src="../assets/script.js"></script>
+</body>
+</html>

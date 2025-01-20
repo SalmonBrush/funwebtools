@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+canvas {
+    border: 2px solid white;
+}
+
+.controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.switch, .resolution, .slider-container {
+    margin-top: 10px;
+}
